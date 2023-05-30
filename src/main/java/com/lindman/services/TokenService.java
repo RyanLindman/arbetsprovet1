@@ -20,7 +20,7 @@ public class TokenService {
 
     @Autowired
     private JwtEncoder jwtEncoder;
-    private final long validityInMilliseconds = 60000; // 1 min
+    private final long validityInMilliseconds = 4000000; //
 
     @Autowired
     private JwtDecoder jwtDecoder;

@@ -82,7 +82,7 @@ public class ListingController {
     }
 
     @GetMapping("/all")
-    public ResponseEntity<List<Listing>> getAllListingsInEnglish(@RequestParam(name = "lang") String language) throws IOException, InterruptedException {
+    public ResponseEntity<List<Listing>> getAllListingsInEnglish( /*@RequestParam(name = "lang") String language*/) throws IOException, InterruptedException {
         String key = System.getenv("RAPID_API");
 
       /**  HttpRequest request = HttpRequest.newBuilder()
@@ -93,7 +93,7 @@ public class ListingController {
                 .header("content-type", "application/x-www-form-urlencoded")
                 .header("X-RapidAPI-Key", key)
                 .header("X-RapidAPI-Host", "text-translator2.p.rapidapi.com")
-                .method("POST", HttpRequest.BodyPublishers.ofString("source_language=sv&target_language="+ language + "&text=bajs"))
+                .method("POST", HttpRequest.BodyPublishers.ofString("source_language=sv&target_language="+ language + "&text=solen"))
                 .build();
         HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
