@@ -8,7 +8,7 @@
 		<version>3.0.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.unkownkoder</groupId>
+	<groupId>com.lindman</groupId>
 	<artifactId>listing-app-dirsys</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>AuthenticatedBackend</name>
