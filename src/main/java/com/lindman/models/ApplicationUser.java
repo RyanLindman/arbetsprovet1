@@ -35,11 +35,14 @@ public class ApplicationUser implements UserDetails{
 	}
 	
 
-	public ApplicationUser(Integer userId, String username, String password, Set<Role> authorities) {
+	public ApplicationUser(Integer userId, String username, String password,String full_name, String email, Set<Role> authorities) {
 		super();
 		this.userId = userId;
 		this.username = username;
 		this.password = password;
+		this.email = email;
+		this.full_name= full_name;
+
 		this.authorities = authorities;
 	}
 
@@ -81,22 +84,22 @@ public class ApplicationUser implements UserDetails{
 		this.username = username;
 	}
 	
-	/* If you want account locking capabilities create variables and ways to set them for the methods below */
+
 	@Override
 	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
+
 		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
+
 		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
+
 		return true;
 	}
 
